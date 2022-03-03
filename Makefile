@@ -1,5 +1,5 @@
 CROSS_COPILE ?= arm-linux-gnueabihf-
-TARGET 		 ?= lcd
+TARGET 		 ?= rtc
 
 CC			 := $(CROSS_COPILE)gcc
 LD			 := $(CROSS_COPILE)ld
@@ -20,6 +20,7 @@ INCUDIRS	:= imx6u \
 			   bsp/epit \
 			   bsp/uart \
 			   bsp/lcd \
+			   bsp/rtc \
 			   stdio/include
 
 SRCDIRS		:= project \
@@ -34,6 +35,7 @@ SRCDIRS		:= project \
 			   bsp/epit \
 			   bsp/uart \
 			   bsp/lcd \
+			   bsp/rtc \
 			   stdio/lib
 
 INCLUDE		:= $(patsubst %, -I %, $(INCUDIRS))
